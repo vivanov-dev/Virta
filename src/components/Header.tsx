@@ -9,7 +9,7 @@ const Wrapper = styled.header`
         padding: 49px 40px;
     }
 `
-const StyledLogo = styled(props => <Logo {...props} />)`
+const StyledLogo = styled((props) => <img src={Logo} {...props} />)`
     height: 30px;
     width: 80px;
 `

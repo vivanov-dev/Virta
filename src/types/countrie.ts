@@ -1,5 +1,7 @@
+import Flags from "country-flag-icons/react/3x2";
+
 export type Countrie = {
-    code: string;
+    code: keyof typeof Flags 
     name: string;
     iso3: string;
     otpInAppEnabled: boolean;

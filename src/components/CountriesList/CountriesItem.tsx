@@ -59,10 +59,10 @@ const Indicator = styled.div`
     height: 48px;
     border-radius: 0px 8px 8px 0px;
 `
-const EnabledIndicator = styled(props => <Indicator {...props} />)`
+const EnabledIndicator = styled((props) => <Indicator {...props}/>)`
     background: #00AD09;
 `
-const DisabledIndicator = styled(props => <Indicator {...props} />)`
+const DisabledIndicator = styled((props) => <Indicator {...props}/>)`
     background: #FF0000;
 `
 const Status = styled.div`
@@ -71,13 +71,11 @@ const Status = styled.div`
     top: 50%;
     transform: translateY(-50%);
 `
-const CheckIcon = styled(props => <Check {...props} />)`
-    fill: #00AD09;
+const CheckIcon = styled((props) => <img src={Check} {...props}/>)`
     width: 24px;
     height: 24px;
 `
-const CloseIcon = styled(props => <Close {...props} />)`
-    fill: #FF0000;
+const CloseIcon = styled((props) => <img src={Close} {...props}/>)`
     width: 24px;
     height: 24px;
 `

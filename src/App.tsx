@@ -30,7 +30,7 @@ const H1 = styled.h1`
         display: block;
     }
 `
-const StyledBackground = styled(props => <BackgroundEl {...props} />)`
+const StyledBackground = styled((props) => <img src={BackgroundEl} {...props} />)`
     display: none;
     margin-left: auto;
     width: 88.6%;
@@ -52,7 +52,7 @@ function App() {
                     : <CountriesList listData={data}/>
                 }
             </Wrapper>
-                <StyledBackground width={"100%"} height={"100%"} />
+                <StyledBackground/>
         </Layout>
     )
 }
