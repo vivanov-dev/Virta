@@ -1,2 +1,1 @@
-var transform = function () {};
-exports["default"] = transform;
+module.exports = "SVG";
