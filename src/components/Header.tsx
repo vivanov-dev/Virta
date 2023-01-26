@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { device } from "../utils/device";
-import { ReactComponent as Logo } from "../assets/svg/logo.svg";
-
-type Props = {
-    
-};
+import Logo from "../assets/svg/logo.svg";
 
 const Wrapper = styled.header`
     @media ${device.laptop} {
@@ -13,7 +9,7 @@ const Wrapper = styled.header`
         padding: 49px 40px;
     }
 `
-const StyledLogo = styled(Logo)`
+const StyledLogo = styled(props => <Logo {...props} />)`
     height: 30px;
     width: 80px;
 `
@@ -27,7 +23,7 @@ const Paragraph = styled.p`
     }
 `
 
-const Header = (props: Props) => {
+const Header = () => {
     return (
         <Wrapper>
             <StyledLogo/>

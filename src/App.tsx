@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "./utils/device";
 import { Header, CountriesList } from "./components";
 import { useCountries } from "./hooks/useCountries";
-import { ReactComponent as BackgroundEl } from "../src/assets/svg/bg-el.svg";
+import BackgroundEl from "../src/assets/svg/bg-el.svg";
 
 const Layout = styled.div`
     min-height: 100vh;
@@ -30,7 +30,7 @@ const H1 = styled.h1`
         display: block;
     }
 `
-const StyledBackground = styled(BackgroundEl)`
+const StyledBackground = styled(props => <BackgroundEl {...props} />)`
     display: none;
     margin-left: auto;
     width: 88.6%;

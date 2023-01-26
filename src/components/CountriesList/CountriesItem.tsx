@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { device } from "../../utils/device";
 import { Countrie } from "../../types/countrie";
 import { Flag } from "../Flag";
-import { ReactComponent as Check } from "../../assets/svg/checkmark-filled.svg";
-import { ReactComponent as Close } from "../../assets/svg/close-filled.svg";
+import Check from "../../assets/svg/checkmark-filled.svg";
+import Close from "../../assets/svg/close-filled.svg";
 
 const Li = styled.li`
     display: flex;
@@ -59,10 +59,10 @@ const Indicator = styled.div`
     height: 48px;
     border-radius: 0px 8px 8px 0px;
 `
-const EnabledIndicator = styled(Indicator)`
+const EnabledIndicator = styled(props => <Indicator {...props} />)`
     background: #00AD09;
 `
-const DisabledIndicator = styled(Indicator)`
+const DisabledIndicator = styled(props => <Indicator {...props} />)`
     background: #FF0000;
 `
 const Status = styled.div`
@@ -71,18 +71,18 @@ const Status = styled.div`
     top: 50%;
     transform: translateY(-50%);
 `
-const CheckIcon = styled(Check)`
+const CheckIcon = styled(props => <Check {...props} />)`
     fill: #00AD09;
     width: 24px;
     height: 24px;
 `
-const CloseIcon = styled(Close)`
+const CloseIcon = styled(props => <Close {...props} />)`
     fill: #FF0000;
     width: 24px;
     height: 24px;
 `
 
-export const CountriesItem = (props: Countrie, index: number) => {
+export const CountriesItem = (props: Countrie) => {
     const { code, name, defaultTimezone, otpInAppEnabled } = props;
 
     return (

@@ -2,7 +2,11 @@ import styled from "styled-components";
 import Flags from "country-flag-icons/react/3x2";
 
 type Props = {
-    countryCode: string;
+    [countryCode: string]: any;
+};
+  
+const FlagsObJ: Props = {
+    countryCode: Flags,
 };
 
 const Wrapper = styled.div`
@@ -10,10 +14,8 @@ const Wrapper = styled.div`
     width: 20px;
 `
 
-export const Flag = (props: Props) => {
-    const { countryCode } = props;
-    const FlagIcon = Flags[countryCode];
-     
+export const Flag = ({ countryCode }: Props) => {
+    const FlagIcon = FlagsObJ[countryCode];
     return (
         <Wrapper>
             <FlagIcon width="100%" height="100%"/>
